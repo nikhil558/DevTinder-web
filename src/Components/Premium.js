@@ -9,12 +9,11 @@ const Premium = () => {
     verifyPremium();
   }, []);
 
-  const verifyPremium = () => {
+  const verifyPremium = async () => {
     try {
-      const res = axios.get(BACKEND_URL + "/premium/verify", {
+      const res = await axios.get(BACKEND_URL + "/premium/verify", {
         withCredentials: true,
       });
-      console.log(res);
       setPremium(res.data.isPremium);
     } catch (err) {
       console.error("Error verifying premium status:", err);
