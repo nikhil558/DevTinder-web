@@ -48,7 +48,7 @@ const Premium = () => {
         theme: {
           color: "#3399cc",
         },
-        handler: verifyPremium(),
+        handler: verifyPremium,
       };
       const rzp = new window.Razorpay(options);
       rzp.open();
