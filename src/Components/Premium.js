@@ -1,7 +1,24 @@
 import axios from "axios";
 import { BACKEND_URL } from "../Utills/constants";
+import { useEffect, useState } from "react";
 
 const Premium = () => {
+  const [Premium, setPremium] = useState(false);
+
+  useEffect(() => {
+    verifyPremium();
+  }, []);
+
+  const verifyPremium = () => {
+    try {
+      const res = axios.get(BACKEND_URL + "/payment/verify", {
+        withCredentials: true,
+      });
+      setPremium(res.date.isPremium);
+    } catch (err) {
+      console.error("Error verifying premium status:", err);
+    }
+  };
   const handleOnClick = async (type) => {
     try {
       const order = await axios.post(
@@ -31,6 +48,7 @@ const Premium = () => {
         theme: {
           color: "#3399cc",
         },
+        handler: verifyPremium(),
       };
       const rzp = new window.Razorpay(options);
       rzp.open();
@@ -39,7 +57,7 @@ const Premium = () => {
     }
   };
 
-  return (
+  return Premium ? (
     <div className="mx-4 my-4">
       <div className="flex w-full flex-col lg:flex-row">
         <div className="card bg-primary rounded-box grid h-80 grow place-items-center">
@@ -75,6 +93,8 @@ const Premium = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <p>You are already a premium user</p>
   );
 };
 
