@@ -57,7 +57,7 @@ const Premium = () => {
     }
   };
 
-  return Premium ? (
+  return !Premium ? (
     <div className="mx-4 my-4">
       <div className="flex w-full flex-col lg:flex-row">
         <div className="card bg-primary rounded-box grid h-80 grow place-items-center">
