@@ -14,7 +14,7 @@ const Premium = () => {
       const res = axios.get(BACKEND_URL + "/payment/verify", {
         withCredentials: true,
       });
-      setPremium(res.date.isPremium);
+      setPremium(res.data.isPremium);
     } catch (err) {
       console.error("Error verifying premium status:", err);
     }
