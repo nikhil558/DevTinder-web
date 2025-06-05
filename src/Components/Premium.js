@@ -11,7 +11,7 @@ const Premium = () => {
 
   const verifyPremium = () => {
     try {
-      const res = axios.get(BACKEND_URL + "/payment/verify", {
+      const res = axios.get(BACKEND_URL + "/premium/verify", {
         withCredentials: true,
       });
       setPremium(res.data.isPremium);
