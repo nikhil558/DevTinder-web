@@ -128,5 +128,21 @@
     - Ref - https://razorpay.com/docs/payments/server-integration/nodejs/integration-steps/#integrate-with-razorpay-payment-gateway
     - Ref - https://razorpay.com/docs/webhoooks/validate-test/
     - Ref - https://razorpay.com/docs/webhooks/payloads/payments/
+    - update the payment status in payments collection 
+    - update the user if isPremium 
+    - Use handler function to handle the payment success
 
-  note: Ngrok for localhost webhook
+  **note: Ngrok for localhost webhook**
+
+# Real Time Chat Using Websocket(socket.io)
+
+    - Build the UI for a chat window on /chat/:targetUserId
+    - Setup socket.io in backend
+    - npm i socket.io
+    - Setup frontend socket.io-client
+    - initialize the chat 
+    - create socket connection 
+    - listen to events 
+    - Home work - improve the UI 
+    - Home work - Fix security Bug
+    

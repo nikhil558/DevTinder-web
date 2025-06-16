@@ -2,9 +2,10 @@ import axios from "axios";
 import { BACKEND_URL } from "../Utills/constants";
 import { useDispatch } from "react-redux";
 import { removeRequests } from "../Utills/requestsSlice";
+import { Link } from "react-router";
 
 const ConnectionCard = ({ connection, requestId = null }) => {
-  const { firstName, about, profileUrl } = connection;
+  const { _id, firstName, about, profileUrl } = connection;
   const dispatch = useDispatch();
 
   const handleAccepTAndReject = async (state) => {
@@ -29,7 +30,7 @@ const ConnectionCard = ({ connection, requestId = null }) => {
           className="w-20 h-20 rounded-full object-cover"
         />
       </div>
-      <div className="flex-grow mx-4">
+      <div className="flex-grow mx-4 w-[30%]">
         <h2 className="text-lg font-semibold">{firstName}</h2>
         <p className="line-clamp-2">{about}</p>
       </div>
@@ -48,6 +49,14 @@ const ConnectionCard = ({ connection, requestId = null }) => {
             Reject
           </button>
         </div>
+      )}
+      {!requestId && (
+        <Link
+          to={"/chat/" + _id}
+          className="inline-flex items-center px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg transition-all duration-200 hover-scale"
+        >
+          Open Chat
+        </Link>
       )}
     </div>
   );

@@ -24,6 +24,7 @@ const Requests = () => {
   useEffect(() => {
     fetchConnections();
   }, []);
+
   return (
     <div className="flex flex-col items-center py-4 px-4">
       <h1 className="">Requests</h1>
