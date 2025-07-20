@@ -3,30 +3,30 @@
 Devtinder is a developer-focused networking platform inspired by the Tinder interaction model — built to help developers discover, connect, and collaborate based on shared interests and tech stacks.
 
 # 🚀 Key Features:
--**Authentication System:** Secure sign-up and login functionality with real-time session handling.
+- **Authentication System:** Secure sign-up and login functionality with real-time session handling.
 
--**Dynamic Profiles:** Users can create and update their profiles with tech stacks, bios, and project links.
+- **Dynamic Profiles:** Users can create and update their profiles with tech stacks, bios, and project links.
 
--**Swipe-to-Match Logic:** Browse through developer profiles and connect when there's mutual interest.
+- **Swipe-to-Match Logic:** Browse through developer profiles and connect when there's mutual interest.
 
--**Live Chat:** Once matched, users can start real-time conversations through WebSocket-powered chat.
+- **Live Chat:** Once matched, users can start real-time conversations through WebSocket-powered chat.
 
--**Premium Features:** Integrated Razorpay to unlock premium tools, such as unlimited swipes and advanced filters.
+- **Premium Features:** Integrated Razorpay to unlock premium tools, such as unlimited swipes and advanced filters.
 
--**Mobile-Friendly UI:** Fully responsive design using modern frontend tools for seamless experience across devices.
+- **Mobile-Friendly UI:** Fully responsive design using modern frontend tools for seamless experience across devices.
 
 # 🛠️ Tech Stack:
-Frontend: React.js, Tailwind CSS
+- **Frontend:** React.js, Tailwind CSS
 
-Backend: Node.js, Express.js
+- **Backend:** Node.js, Express.js
 
-Real-time Communication: Socket.IO
+- **Real-time Communication:** Socket.IO
 
-Payments: Razorpay Integration
+- **Payments:** Razorpay Integration
 
-Authentication: JWT-based secure auth system
+- **Authentication:** JWT-based secure auth system
 
-Database: MongoDB
+- **Database:** MongoDB
 
 # DevTinder
 
